@@ -11,14 +11,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template('temp.html', title = "Anish's Page", message = "Hello World!")
+    return render_template('temp.html', title = "Anish's Page", Message = "Hello World!")
 @app.route("/french")
 def bonjour_le_monde():
-    return render_template('temp.html', title = "Anish's Page", message = "Bonjour Le Monde!")
+    return render_template('temp.html', title = "Anish's Page", Message = "Bonjour Le Monde!")
 
 @app.route("/spanish")
 def hola_mundo():
-    return render_template('temp.html', title = "Anish's Page", message = "Hola Mundo!")
+    return render_template('temp.html', title = "Anish's Page", Message = "Hola Mundo!")
 
 if(__name__ == "__main__"):
     app.debug = True
