@@ -5,21 +5,20 @@ HW #4 -- Fill Up Yer Flask
 2017-09-22
 '''
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return '<center><font size="40sp" color="Red">Hello World!</font></center>'
-
+    return render_template('temp.html', title = "Anish's Page", message = "Hello World!")
 @app.route("/french")
 def bonjour_le_monde():
-    return '<center><font size="40sp" color="Blue">Bonjour Le Monde!</font></center>'
+    return render_template('temp.html', title = "Anish's Page", message = "Bonjour Le Monde!")
 
 @app.route("/spanish")
 def hola_mundo():
-    return '<center><font size="40sp" color="Green">Hola Mundo!</font></center>'
+    return render_template('temp.html', title = "Anish's Page", message = "Hola Mundo!")
 
 if(__name__ == "__main__"):
     app.debug = True
